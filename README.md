@@ -1,6 +1,6 @@
 # 若水学习会记账系统
 
-> 测试路径：jz.srqcode.com/account
+> 测试路径：[jz.srqcode.com/account](http://jz.srqcode.com/account)
 
 ## 一、技术选型
 
@@ -188,10 +188,10 @@
      return [
        *// 全局请求缓存*
        *// /think/middleware/CheckRequestCache::class,*
-     
+
        *// 多语言加载*
        *// /think/middleware/LoadLangPack::class,*
-     
+
        *// Session初始化*
        /think/middleware/SessionInit::class
      ];
@@ -577,7 +577,7 @@
   >    ```php
   >    // 获取本机ip信息
   >    $ip = $this->get_ip(0, true);  //上线后关闭
-  >   
+  >
   >    // 根据ip地址获取地区信息
   >    $areas = $this->get_data('http://apis.juhe.cn/ip/ipNew', [
   >            "ip" => $ip , //需要查询的IP地址或域名
@@ -596,10 +596,10 @@
   >                // print_r($areas);
   >                // 获取完整的地区名
   >                $area = $areas['result']['City'];
-  >   
+  >
   >                // 截掉最后一个：区
   >                $area = substr($area, 0, strlen($area) - 3);
-  >   
+  >
   >                // 如果地区信息存在的话，请求天气信息
   >                $weather = $this-
   >                    >get_data('http://apis.juhe.cn/simpleWeather/query', [
@@ -1507,7 +1507,7 @@
   >    <!-- 月费用构成  -->
   >    <div class="box1">
   >      <div class="box1-head">月费用构成</div>
-  >   
+  >
   >      <?php if ($t_money != 0) : ?>
   >      <div class="box1-item">
   >        <div class="" id="pie" style="width: 400px;height:400px;"></div>
@@ -1576,7 +1576,7 @@
   >            year1 + '&month1=' + month1 + '&c_name=' + c_name,
   >        });
   >    }
-  >   
+  >
   >    // 月费用构成饼状图
   >    echarts.init(document.getElementById('pie'), 'shine').setOption({
   >        title: {
@@ -1592,7 +1592,7 @@
   >                    name: "<?= $c['c_name'] ?>",
   >                },
   >                <?php endforeach; ?>
-  >   
+  >
   >            ],
   >            radius: ['20%', '40%']
   >        }]
@@ -1613,7 +1613,7 @@
   >            ->order('group_money', 'DESC')
   >            ->select()
   >            ->toArray();
-  >   
+  >
   >        return view('/project/project_statistics', $data);
   >    }
   >
@@ -1771,7 +1771,7 @@
   >    {
   >        $data['year1'] = Request::get('year1', '');
   >        $data['month1'] = Request::get('month1', '');
-  >   
+  >
   >        $data['p_list'] = Db::table('jz_project_total')
   >            ->whereMonth('add_time', $data['year1'] . '-' . $data['month1'])
   >            ->order('t_money', 'desc')
@@ -1789,7 +1789,7 @@
   >
   >    ```js
   >    var year2 = <?= $year2 ?>; //年选择器的值
-  >   
+  >
   >    //年度时间切换
   >    laydate.render({
   >        elem: '#year',
@@ -1800,7 +1800,7 @@
   >        theme: '#1E9FFF',
   >        done: function(value, date) {
   >            year2 = date.year;
-  >   
+  >
   >            window.location.href = "/index.php/project/project_statistics?year1=" + year1 + '&month1=' +
   >                month1 + '&year2=' + year2;
   >        }
