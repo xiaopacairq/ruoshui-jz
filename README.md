@@ -25,25 +25,25 @@
 
 【图一：登录界面（login.php）】
 
-![image-20230115113821627](\images\image-20230115113821627.png)
+![image-20230115113821627](./images/image-20230115113821627.png)
 
 【图二：记账主界面（index.php）】
 
-![image-20230113101556730](images\image-20230113101556730.png)
+![image-20230113101556730](./images/image-20230113101556730.png)
 
 【图三：项目情况总表（projectTotal.php）】
 
-![image-20230113101932544](images\image-20230113101932544.png)
+![image-20230113101932544](./images/image-20230113101932544.png)
 
-【图四：项目分表 N（projectSlaveN.php）】![image-20230113102532850](images\image-20230113102532850.png)
+【图四：项目分表 N（projectSlaveN.php）】![image-20230113102532850](./images/image-20230113102532850.png)
 
 【图五：费用明细总表（cost.php）】
 
-![image-20230113102636028](C:\Users\28339\AppData\Roaming\Typora\typora-user-images\image-20230113102636028.png)
+![image-20230113102636028](C:/Users/28339/AppData/Roaming/Typora/typora-user-./images/image-20230113102636028.png)
 
 【图六：项目情况报告（project_tatistics.php）】
 
-![image-20230126110434931](images\image-20230126110434931.png)
+![image-20230126110434931](./images/image-20230126110434931.png)
 
 ## 三、客户端页面功能设计
 
@@ -61,7 +61,7 @@
 
 3. 实现方式：layui 提供表单技术、Ajax 提供页面请求、PHP 提供后端校验、验证码功能和登录校验功能；
 
-   ![image-20230113112815138](images\image-20230113112815138.png)
+   ![image-20230113112815138](./images/image-20230113112815138.png)
 
 ### （三）项目情况界面
 
@@ -71,9 +71,9 @@
 
 3. 实现方式：layui 提供表单、表单、打印导出技术、Ajax 提供页面请求、PHP 提供 CURD
 
-   ![image-20230113235113503](images\image-20230113235113503.png)
+   ![image-20230113235113503](./images/image-20230113235113503.png)
 
-   ![image-20230113232416320](images\image-20230113233050758.png)
+   ![image-20230113232416320](./images/image-20230113233050758.png)
 
 ### （四）经费明细界面
 
@@ -83,7 +83,7 @@
 
 3. 实现方式：layui 提供表单、表单、打印导出技术、Ajax 提供页面请求、PHP 提供 CURD；
 
-   ![image-20230113230455720](images\image-20230113230455720.png)
+   ![image-20230113230455720](./images/image-20230113230455720.png)
 
 ### （五）项目统计报告
 
@@ -187,13 +187,13 @@
      *// 全局中间件定义文件*
      return [
        *// 全局请求缓存*
-       *// \think\middleware\CheckRequestCache::class,*
+       *// /think/middleware/CheckRequestCache::class,*
      
        *// 多语言加载*
-       *// \think\middleware\LoadLangPack::class,*
+       *// /think/middleware/LoadLangPack::class,*
      
        *// Session初始化*
-       \think\middleware\SessionInit::class
+       /think/middleware/SessionInit::class
      ];
      ```
 
@@ -208,15 +208,15 @@
   1. 项目地址：https://github.com/apache/echarts/tree/master/dist；
   2. 下载方式：因为采用单文件引入，所以下载 echarts.simple.js 最小的简易库；
 
-  ![image-20230126111017459](images\image-20230126111017459.png)
+  ![image-20230126111017459](./images/image-20230126111017459.png)
 
 - 配置 css 样式库：存放页面样式文件
 
-  ![image-20230126111149658](images\image-20230126111149658.png)
+  ![image-20230126111149658](./images/image-20230126111149658.png)
 
 - 配置公共图片库：存放页面图片和图标文件
 
-  ![image-20230126111241390](images\image-20230126111241390.png)
+  ![image-20230126111241390](./images/image-20230126111241390.png)
 
 - 配置公共 js 组件库：存放公共 js 库
 
@@ -224,7 +224,7 @@
 
 ##### （1）界面设计效果
 
-![image-20230115222702022](images\image-20230115222702022.png)
+![image-20230115222702022](./images/image-20230115222702022.png)
 
 ##### （2）技术点
 
@@ -236,7 +236,7 @@
   <!-- 自定义设置网站图标 -->
   <link
     rel="shortcut icon"
-    href="/static/images/index.ico"
+    href="/static/./images/index.ico"
     type="image/x-icon"
   />
   ```
@@ -293,17 +293,17 @@
   > // 全局中间件定义文件
   > return [
   >     // 全局请求缓存
-  >     // \think\middleware\CheckRequestCache::class,
+  >     // /think/middleware/CheckRequestCache::class,
   >     // 多语言加载
-  >     // \think\middleware\LoadLangPack::class,
+  >     // /think/middleware/LoadLangPack::class,
   >     // Session初始化
-  >     \think\middleware\SessionInit::class
+  >     /think/middleware/SessionInit::class
   > ];
   > ```
   >
   > ```php
-  > use think\captcha\facade\Captcha;
-  > use think\facade\Session;  //引入session类
+  > use think/captcha/facade/Captcha;
+  > use think/facade/Session;  //引入session类
   > // 注册验证码
   > public function verify()
   > {
@@ -374,7 +374,7 @@
   > 1.session 保存的是验证码，最后保存的是用户信息
   >
   > ```php
-  > use think\facade\Session;  //引入session类
+  > use think/facade/Session;  //引入session类
   >
   > // 执行登录类
   > class Account extends BaseController
@@ -424,7 +424,7 @@
 
 ##### （1）界面效果
 
-![image-20230118104011409](images\image-20230118104011409.png)
+![image-20230118104011409](./images/image-20230118104011409.png)
 
 ##### （2）技术点
 
@@ -510,7 +510,7 @@
 
   > 天气预报控件需要 city：'汕头' 这个参数，城市参数需要从 ip 获取，ip 需要通过 php 获取，所以需要执行的逻辑顺序如下：
   >
-  > ![image-20230118105857832](images\image-20230118105857832.png)
+  > ![image-20230118105857832](./images/image-20230118105857832.png)
   >
   > 1. 使用 php 获取当地的 ip 地址
   >
@@ -626,9 +626,9 @@
 
 - 技术点 3：项目总表分表生成逻辑
 
-  > ![image-20230121122444132](images\image-20230121122444132.png)
+  > ![image-20230121122444132](./images/image-20230121122444132.png)
   >
-  > ![image-20230121122720148](images\image-20230121122720148.png)
+  > ![image-20230121122720148](./images/image-20230121122720148.png)
   >
   > 总表和分表的区别在于是否传入 cid 参数，由此可以作为判断依据
   >
@@ -658,7 +658,7 @@
 
 - 技术点 4：侧边组件及网页统计数据加载(报表暂时忽略，在后面会单独讲)
 
-  > ![image-20230119144428992](images\image-20230119144428992.png)
+  > ![image-20230119144428992](./images/image-20230119144428992.png)
   >
   > ```php
   > // 主页
@@ -757,7 +757,7 @@
 
 ##### （1）界面设计
 
-![image-20230121123250797](images\image-20230121123250797.png)
+![image-20230121123250797](./images/image-20230121123250797.png)
 
 ##### （2）技术点
 
@@ -832,7 +832,7 @@
   >
   > 定义双击事件，双击单元格后，通过 id 向后端请求：详细信息的数据
   >
-  > ![image-20230121123325498](images\image-20230121123325498.png)
+  > ![image-20230121123325498](./images/image-20230121123325498.png)
   >
   > ```js
   > //触发行双击事件，弹出详细信息
@@ -859,7 +859,7 @@
 
 - 技术点 2：数据表格的检索
 
-  > ![image-20230119133509389](images\image-20230119133509389.png)
+  > ![image-20230119133509389](./images/image-20230119133509389.png)
   >
   > 定义检索栏于表格工具栏位置
   >
@@ -1092,7 +1092,7 @@
 
 - 技术点 3：添加数据配置
 
-  > ![image-20230121123425479](images\image-20230121123425479.png)
+  > ![image-20230121123425479](./images/image-20230121123425479.png)
   >
   > 请求页面
   >
@@ -1116,7 +1116,7 @@
 
 - 技术点 4：金额框配置(输入合法金额)
 
-  > ![image-20230121123637717](images\image-20230121123637717.png)
+  > ![image-20230121123637717](./images/image-20230121123637717.png)
   >
   > ```html
   > <input
@@ -1200,7 +1200,7 @@
 
   > 表格的每一行都有一个单选按钮，点击单选按钮后，触发点击事件，获取当前行的 id 值
   >
-  > ![image-20230119145017919](images\image-20230119145017919.png)
+  > ![image-20230119145017919](./images/image-20230119145017919.png)
   >
   > ```js
   > // 点击单选按钮，获取数据的id，用于修改和删除
@@ -1216,9 +1216,9 @@
 
   > 开启删除和编辑模式
   >
-  > ![image-20230119145054082](images\image-20230119145054082.png)
+  > ![image-20230119145054082](./images/image-20230119145054082.png)
   >
-  > ![image-20230121123944812](images\image-20230121123944812.png)
+  > ![image-20230121123944812](./images/image-20230121123944812.png)
   >
   > ```js
   > //固定块 :执行修改和删除功能
@@ -1285,7 +1285,7 @@
 
 - 技术点 6：结余金额计算
 
-  > ![image-20230121124029511](images\image-20230121124029511.png)
+  > ![image-20230121124029511](./images/image-20230121124029511.png)
   >
   > ```php
   > // 若水学习会经费明细总表
@@ -1300,7 +1300,7 @@
 
 ##### （1）界面效果
 
-![image-20230120114303522](images\image-20230120114303522.png)
+![image-20230120114303522](./images/image-20230120114303522.png)
 
 ##### （2）技术点
 
@@ -1310,9 +1310,9 @@
 >
 > 分表：删除修改功能
 >
-> ![image-20230121124537997](images\image-20230121124537997.png)
+> ![image-20230121124537997](./images/image-20230121124537997.png)
 >
-> ![image-20230121124523004](images\image-20230121124523004.png)
+> ![image-20230121124523004](./images/image-20230121124523004.png)
 >
 > ```php+html
 > <?php if (isset($project_c_list['cid'])) : ?>
@@ -1353,7 +1353,7 @@
 
 - 技术点 2，分类数据添加和删除
 
-> ![image-20230121125418497](images\image-20230121125418497.png)
+> ![image-20230121125418497](./images/image-20230121125418497.png)
 >
 > 在添加和修改的界面，可以添加分类
 >
@@ -1408,17 +1408,17 @@
 
 ##### （1）界面效果
 
-![image-20230126111531856](images\image-20230126111531856.png)
+![image-20230126111531856](./images/image-20230126111531856.png)
 
-![image-20230126111549204](images\image-20230126111549204.png)
+![image-20230126111549204](./images/image-20230126111549204.png)
 
-![image-20230126111608519](images\image-20230126111608519.png)
+![image-20230126111608519](./images/image-20230126111608519.png)
 
 ##### （2）技术点
 
 - 技术点 1：日期选择器上半区数据获取
 
-  > ![image-20230126111531856](images\image-20230126111531856.png)
+  > ![image-20230126111531856](./images/image-20230126111531856.png)
   >
   > 1. 日期选择器配置
   >
@@ -1499,9 +1499,9 @@
   >
   > 3. 月费用构成数据获取
   >
-  >    ![image-20230126113555465](images\image-20230126113555465.png)
+  >    ![image-20230126113555465](./images/image-20230126113555465.png)
   >
-  >    ![image-20230126113528044](images\image-20230126113528044.png)
+  >    ![image-20230126113528044](./images/image-20230126113528044.png)
   >
   >    ```html
   >    <!-- 月费用构成  -->
@@ -1637,7 +1637,7 @@
   >
   > 4. 近 6 月月度对比
   >
-  >    ![image-20230126114304366](images\image-20230126114304366.png)
+  >    ![image-20230126114304366](./images/image-20230126114304366.png)
   >
   >    ```js
   >    // 近6个月的经费信息（柱状图）
@@ -1687,9 +1687,9 @@
   >
   > 5. 月项目费用排行
   >
-  >    ![image-20230126114316535](images\image-20230126114316535.png)
+  >    ![image-20230126114316535](./images/image-20230126114316535.png)
   >
-  >    ![image-20230126114330890](images\image-20230126114330890.png)
+  >    ![image-20230126114330890](./images/image-20230126114330890.png)
   >
   >    ```html
   >    <div class="layui-card">
@@ -1783,7 +1783,7 @@
 
 - 技术点 2：年数据
 
-  > ![image-20230126114632103](images\image-20230126114632103.png)
+  > ![image-20230126114632103](./images/image-20230126114632103.png)
   >
   > 1. 年数据获取
   >
